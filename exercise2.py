@@ -23,7 +23,6 @@ def main():
 	screen = pygame.display.set_mode(screen_size)
 	clock = pygame.time.Clock()
 
-	(x,y,width,height) = (100,100,50,50)
 
 	while True:
 		clock.tick(FPS)
@@ -33,7 +32,15 @@ def main():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit(0)
-		color = red
+		xpos = random.randrange(800)
+                ypos = random.randrange(600)
+                widthx = random.randrange(xpos,800)
+                heighty = random.randrange(ypos,600)
+                (x,y,width,height) = (xpos,ypos,widthx,heighty)
+                color = (random.randrange(255), random.randrange(255), random.randrange(255))
+
+		
+		
 		pygame.draw.rect(screen, color, (x,y,width,height))
 		pygame.display.flip()
 
