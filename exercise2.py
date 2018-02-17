@@ -22,22 +22,25 @@ def main():
 	pygame.init()
 	screen = pygame.display.set_mode(screen_size)
 	clock = pygame.time.Clock()
+	screen.fill(black)
 
 
 	while True:
 		clock.tick(FPS)
 
-		screen.fill(black)
+		
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit(0)
+				
 		xpos = random.randrange(800)
-                ypos = random.randrange(600)
-                widthx = random.randrange(xpos,800)
-                heighty = random.randrange(ypos,600)
-                (x,y,width,height) = (xpos,ypos,widthx,heighty)
-                color = (random.randrange(255), random.randrange(255), random.randrange(255))
+		
+		ypos = random.randrange(600)
+		widthx = random.randrange(800 - xpos)
+		heighty = random.randrange(600 - ypos)
+		(x,y,width,height) = (xpos,ypos,widthx,heighty)
+		color = (random.randrange(255), random.randrange(255), random.randrange(255))
 
 		
 		
