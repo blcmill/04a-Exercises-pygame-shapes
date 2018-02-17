@@ -30,9 +30,9 @@ def main():
 				pygame.quit()
 				sys.exit(0)
 
-		print(datetime.now().time())
+		
 
-		text = "Hello World!"
+		text = str(datetime.now().time())
 		f = font.render(text, True, white)
 		(fwidth,fheight) = font.size(text)
 		screen.blit(f,(x,y))
