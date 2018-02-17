@@ -20,6 +20,7 @@ def main():
 	clock = pygame.time.Clock()
 
 	(x,y,radius) = (100,100,20)
+	pos = (100, 100) #you have to initialize pos here before setting it
 	
 	while True:
 		clock.tick(FPS)
@@ -32,7 +33,10 @@ def main():
 			if event.type == pygame.MOUSEBUTTONUP:
 				pos = pygame.mouse.get_pos()
 		
-		pygame.draw.circle(screen, white, (x,y), radius)
+		pygame.draw.circle(screen,
+                                   ((int(pos[0]) * 255) / screen_size[0],
+                                    (int(pos[1] * 255) / screen_size[1]),
+                                    255), pos, radius) #It also changes color!
 		
 		pygame.display.flip()
 
