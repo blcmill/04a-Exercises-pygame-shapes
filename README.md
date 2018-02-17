@@ -1,3 +1,5 @@
+# Changes by Blake Miller
+This assignment completes the goals stated and adds functionality to Exercise 4 changing the color of the circle based on position.
 # 04a-Exercises-pygame-shapes
 
 Here are some exercises to help you learn about PyGame, the engine we will be using throughout the rest of the semester.
